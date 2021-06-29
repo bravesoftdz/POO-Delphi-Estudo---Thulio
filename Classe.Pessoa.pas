@@ -4,7 +4,7 @@ interface
 
 type
   TPessoa = class
-    private
+    private                           // teste
       Idade : Integer;
     public
       Nome : String;
