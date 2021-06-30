@@ -42,7 +42,8 @@ begin
   Pessoa := TPessoa.Create;
   try
     Pessoa.Nome := 'Vinícius';
-    ShowMessage(Pessoa.Nome);
+    Pessoa.Sexo := 'Masculino';
+    ShowMessage(Pessoa.Nome + ' - ' + Pessoa.Sexo);
   finally
     Pessoa.Free;
   end;

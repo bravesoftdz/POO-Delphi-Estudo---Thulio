@@ -4,10 +4,13 @@ interface
 
 type
   TPessoa = class
-    private                           // teste
-      Idade : Integer;
+    private
+
     public
       Nome : String;
+      Idade : Integer;
+      Sexo : String;
+      Etnia : String;
   end;
 
 implementation
