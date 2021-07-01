@@ -2,17 +2,28 @@ unit Classe.Pessoa;
 
 interface
 
+uses
+  System.SysUtils;
+
 type
   TPessoa = class
     private
 
     public
       Nome : String;
-      Idade : Integer;
+      DataNasc : String;
       Sexo : String;
       Etnia : String;
+      function Idade : Integer;
   end;
 
 implementation
+
+{ TPessoa }
+
+function TPessoa.Idade : Integer;
+begin
+  Result := Trunc((now - StrToDate(DataNasc)) / 365.25);
+end;
 
 end.

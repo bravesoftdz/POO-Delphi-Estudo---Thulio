@@ -37,15 +37,23 @@ uses
 
 procedure TfrmPrincipal.Button1Click(Sender: TObject);
   var
-  Pessoa : TPessoa;
+  Pessoa1 , Pessoa2 : TPessoa;
 begin
-  Pessoa := TPessoa.Create;
+  Pessoa1 := TPessoa.Create;
+  Pessoa2 := TPessoa.Create;
   try
-    Pessoa.Nome := 'Vinícius';
-    Pessoa.Sexo := 'Masculino';
-    ShowMessage(Pessoa.Nome + ' - ' + Pessoa.Sexo);
+    Pessoa1.Nome := 'Vinícius';
+    Pessoa1.DataNasc := '07/04/1993';
+
+    Pessoa2.Nome := 'Fulano';
+    Pessoa2.DataNasc := '31/12/1957';
+
+    ShowMessage(Pessoa1.Nome + ' - ' + IntToStr(Pessoa1.Idade));
+
+    ShowMessage(Pessoa2.Nome + ' - ' + IntToStr(Pessoa2.Idade));
   finally
-    Pessoa.Free;
+    Pessoa1.Free;
+    Pessoa2.Free;
   end;
 end;
 
