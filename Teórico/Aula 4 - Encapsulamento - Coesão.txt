@@ -1,0 +1,2 @@
+Comportamentos Únicos, métodos e funções que realizem apenas uma única operação para
+facilitarem o seu reaproveitamento,
