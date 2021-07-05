@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Classe.Cliente, Classe.Pessoa;
 
 type
   TfrmPrincipal = class(TForm)
@@ -21,9 +21,6 @@ var
 
 implementation
 
-uses
-  Classe.Pessoa;
-
 {$R *.dfm}
 
 {
@@ -37,26 +34,25 @@ uses
 
 procedure TfrmPrincipal.Button1Click(Sender: TObject);
   var
-  Pessoa1 , Pessoa2 : TPessoa;
+  Pessoa1 : TPessoa;
+  Cliente1 : TCliente;
 begin
   Pessoa1 := TPessoa.Create;
-  Pessoa2 := TPessoa.Create;
+  Cliente1 := TCliente.Create;
   try
     Pessoa1.Nome := 'Vinícius';
     Pessoa1.DataNasc := '07/04/1993';
 
-    Pessoa2.Nome := 'Fulano';
-    Pessoa2.DataNasc := '31/12/1957';
+    Cliente1.Nome := 'Fulano';
+    Cliente1.DataNasc := '31/12/1957';
 
-
-    Pessoa2.SQL.Gravar;
 
     ShowMessage(Pessoa1.Nome + ' - ' + IntToStr(Pessoa1.Idade));
 
-    ShowMessage(Pessoa2.Nome + ' - ' + IntToStr(Pessoa2.Idade));
+    ShowMessage(Cliente1.Nome + ' - ' + IntToStr(Cliente1.Idade));
   finally
     Pessoa1.Free;
-    Pessoa2.Free;
+    Cliente1.Free;
   end;
 end;
 

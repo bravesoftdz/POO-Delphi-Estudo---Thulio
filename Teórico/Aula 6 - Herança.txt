@@ -1,0 +1,1 @@
+Herança é a capacidade de as classes tem uma de herdarem todas as propriedades e funções da outra, classe Pai com suas classes filhos
