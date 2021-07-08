@@ -9,6 +9,7 @@ uses
 type
   TfrmPrincipal = class(TForm)
     Button1: TButton;
+    edtNome: TEdit;
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
@@ -40,7 +41,7 @@ begin
   Pessoa1 := TPessoa.Create;
   Cliente1 := TCliente.Create;
   try
-    Pessoa1.Nome := 'Vinícius';
+    Pessoa1.Nome := edtNome.Text;
     Pessoa1.DataNasc := '07/04/1993';
 
     Cliente1.Nome := 'Fulano';

@@ -1,0 +1,1 @@
+Ela serve para encapsular as variáveis da minha classe

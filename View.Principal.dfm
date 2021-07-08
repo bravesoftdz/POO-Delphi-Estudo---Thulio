@@ -22,4 +22,12 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 0
     OnClick = Button1Click
   end
+  object edtNome: TEdit
+    Left = 272
+    Top = 216
+    Width = 121
+    Height = 21
+    TabOrder = 1
+    Text = 'edtNome'
+  end
 end
