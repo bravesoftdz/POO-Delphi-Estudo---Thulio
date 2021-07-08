@@ -44,8 +44,17 @@ begin
     Pessoa1.Nome := edtNome.Text;
     Pessoa1.DataNasc := '07/04/1993';
 
+    // Vinicius escrevendo
+    Pessoa1.
+
+
     Cliente1.Nome := 'Fulano';
     Cliente1.DataNasc := '31/12/1957';
+
+    // Vinicius escrevendo
+    Cliente1.ValorCredito := '450.40';
+
+
 
 
     ShowMessage(Pessoa1.Nome + ' - ' + IntToStr(Pessoa1.Idade));

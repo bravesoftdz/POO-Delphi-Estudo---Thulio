@@ -1,0 +1,15 @@
+ele não tem controle sobre isso
+
+pode fazer oque quiser 
+
+e qualquer controle que eu implementar aqui
+
+fica mais difícil
+
+com isso, vou ter que varrer o código todo
+
+tipo validar um nome se estiver nulo na hora de exibir
+
+para validar isso aí, vou ter que validar isso em outros métodos para saber se isso está nulo ou não.
+
+Mas, se eu for na classe e usar diretamente as propertys, consigo validar isso no ato de ele incluir o valor aqui.
