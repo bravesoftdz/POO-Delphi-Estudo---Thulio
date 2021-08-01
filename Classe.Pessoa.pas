@@ -24,6 +24,10 @@ type
     property Etnia: String read FEtnia write SetEtnia;
     property Nome: String read getNome write setNome;
     function Idade: Integer;
+    function Receber(I : Integer) : String; overload;
+    function Receber(X : Currency) : String; overload;
+    function Receber(A, B : Integer) : String; overload;
+
 
   end;
 
@@ -34,6 +38,16 @@ implementation
 function TPessoa.Idade: Integer;
 begin
   Result := Trunc((now - StrToDate(DataNasc)) / 365.25);
+end;
+
+function TPessoa.Receber(X: Currency): String;
+begin
+  Result := 'Recebi um Valor Currency : ' + CurrToStr(X);
+end;
+
+function TPessoa.Receber(I: Integer): String;
+begin
+  Result := 'Recebi um Valor Inteiro: ' + IntToStr(I);
 end;
 
 procedure TPessoa.SetDataNasc(const Value: String);
@@ -62,6 +76,11 @@ end;
 procedure TPessoa.SetSexo(const Value: String);
 begin
   FSexo := Value;
+end;
+
+function TPessoa.Receber(A, B: Integer): String;
+begin
+  Result := 'A Soma deste Inteiros é: ' + IntToStr(A + B);
 end;
 
 end.

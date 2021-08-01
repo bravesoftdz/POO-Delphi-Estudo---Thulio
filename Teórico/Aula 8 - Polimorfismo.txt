@@ -1,0 +1,1 @@
+Uma mesma função recebendo funções e parâmetros diferentes, tratando de uma forma diferente

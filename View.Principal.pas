@@ -37,29 +37,35 @@ procedure TfrmPrincipal.Button1Click(Sender: TObject);
   var
   Pessoa1 : TPessoa;
   Cliente1 : TCliente;
+  Value : Currency;
 begin
   Pessoa1 := TPessoa.Create;
   Cliente1 := TCliente.Create;
   try
-    Pessoa1.Nome := edtNome.Text;
+    ShowMessage(Pessoa1.Receber(5));
+
+    Value := 10.5;
+
+    ShowMessage(Pessoa1.Receber(Value));
+
+    ShowMessage(Pessoa1.Receber(5, 5));
+
+
+    {Pessoa1.Nome := edtNome.Text;
     Pessoa1.DataNasc := '07/04/1993';
-
-    // Vinicius escrevendo
-    Pessoa1.
-
 
     Cliente1.Nome := 'Fulano';
     Cliente1.DataNasc := '31/12/1957';
 
-    // Vinicius escrevendo
-    Cliente1.ValorCredito := '450.40';
+
+    Cliente1.ValorCredito := 450.40;
 
 
 
 
     ShowMessage(Pessoa1.Nome + ' - ' + IntToStr(Pessoa1.Idade));
 
-    ShowMessage(Cliente1.Nome + ' - ' + IntToStr(Cliente1.Idade));
+    ShowMessage(Cliente1.Nome + ' - ' + IntToStr(Cliente1.Idade));  }
   finally
     Pessoa1.Free;
     Cliente1.Free;
