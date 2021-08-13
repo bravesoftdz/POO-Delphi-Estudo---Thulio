@@ -42,13 +42,17 @@ begin
   Pessoa1 := TPessoa.Create;
   Cliente1 := TCliente.Create;
   try
-    ShowMessage(Pessoa1.Receber(5));
+    ShowMessage(Pessoa1.RetornaNome);
+
+    ShowMessage(Cliente1.RetornaNome);
+
+    {ShowMessage(Pessoa1.Receber(5));
 
     Value := 10.5;
 
     ShowMessage(Pessoa1.Receber(Value));
 
-    ShowMessage(Pessoa1.Receber(5, 5));
+    ShowMessage(Pessoa1.Receber(5, 5));  }
 
 
     {Pessoa1.Nome := edtNome.Text;

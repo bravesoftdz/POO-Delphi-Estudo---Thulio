@@ -28,6 +28,8 @@ type
     function Receber(X : Currency) : String; overload;
     function Receber(A, B : Integer) : String; overload;
 
+    function RetornaNome : string; virtual;
+
 
   end;
 
@@ -81,6 +83,11 @@ end;
 function TPessoa.Receber(A, B: Integer): String;
 begin
   Result := 'A Soma deste Inteiros é: ' + IntToStr(A + B);
+end;
+
+function TPessoa.RetornaNome: string;
+begin
+  Result := 'Eu sou a classe TPessoa';
 end;
 
 end.
